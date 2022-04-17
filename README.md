@@ -14,6 +14,8 @@ Learn FE Concept and prepare Interview
 > REST API는 자체 표현 구조를 통해 API만으로 HTTP 요청의 의미를 이해할 수 있습니다. 또한 이러한 원칙을 지키기 위해 "URI는 동사가 아닌 명사로 표현한다", "행위는 HTTP 메서드로 표현한다." 등의 세부적인 규칙들을 갖고 있습니다.
 >
 > 즉 REST 란 HTTP기반의 클라이언트-서버 통신을 규정한 아키텍처이고, REST에 입각하여 설계된 API가 REST API입니다.
+
+2. [WebSocket](https://velog.io/@dbstjrwnekd/Websocket%EA%B3%BC-socket.io)은 무엇인가요? ws프로토콜을 들어보았나요?
 ## 🍟 data structures & algorithms
 
 ## 🍤 CS
