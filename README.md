@@ -36,6 +36,14 @@ Learn FE Concept and prepare Interview
 > 즉 REST 란 HTTP기반의 클라이언트-서버 통신을 규정한 아키텍처이고, REST에 입각하여 설계된 API가 REST API입니다.
 
 2. [WebSocket](https://velog.io/@dbstjrwnekd/Websocket%EA%B3%BC-socket.io)은 무엇인가요? ws프로토콜을 들어보았나요?
+> WebSocket은 HTML5 표준 기술로 클라이언트와 서버간 connection을 유지하며 양방향 소통을 가능하게 해주는 기술입니다. ws프로토콜을 사용하며 HTTP를 이용한 handshake를 통해 연결이 이루어집니다.
+> Handshaking과정은 다음과 같습니다.
+> 먼저 http request 메시지를 작성합니다. 이때 Upgrade헤더는 websocket을, Connection 헤더에는 Upgrade를 명시하여 프로토콜을 웹소켓으로 변경할 것을 요청합니다. 또한 서로의 신원을 인증하기 위해 Sec-WebSocket-Key 헤더를 포함합니다. 이후 서버에서는 101 switching protocol 응답을 통해 웹소켓 연결을 허용합니다. 마찬가지로 Upgrade: websocket, Connection: Upgrade 헤더를 포함합니다. 또한 Sec-WebSocket-Accept헤더를 보내 신원을 확인합니다.
+
+> Sec-WebSocket-Accept헤더는 Sec-WebSocket-key헤더에 특정 문자열을 연결한 뒤 SHA-1 해싱값을 base64로 인코딩한 결과물입니다. 브라우저에서 해당 값을 계산하여 일치하지 않으면 연결할 수 없습니다.
+> 이후 ws프로토콜로 전환되어 이벤트 드리븐 형식의 양방향 통신이 가능해집니다. WebSocket으로 전송 가능한 데이터는 바이너리와 텍스트 뿐입니다. 따라서 해석이 전적으로 어플리케이션에 맡겨지게 됩니다. 이를 위해 STOMP같은 서브 프로토콜을 사용하거나 JSON형식을 정의하여 통신하는 경우가 많습니다.
+
+> WebSocket은 ws(80번), wss(443번) 프로토콜(포트)를 이용해 양방향 통신을 하며, 통신이 종료되는 경우 Close Frame을 보내 연결을 종료합니다.
 ## 🍟 data structures & algorithms
 
 ## 🍤 CS
