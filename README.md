@@ -26,11 +26,11 @@ Learn FE Concept and prepare Interview
 ## 🍔 React
 1. [useEffect](https://velog.io/@dbstjrwnekd/Using-the-Effect-Hook)가 어떻게 동작하나요?
 > useEffect는 부수효과와 clean-up phase를 담당하는 hook api입니다. 기본적으로 mount/update를 구별하지 않고 매 랜더링시 실행되는 구조를 갖고 있습니다. 이러한 구조는 update 로직의 구현에서 발생할 수 있는 에러를 방지할 수 있도록 도와줍니다. useEffect의 첫 번째 인자로 함수를 넘겨주면, 리액트는 DOM 업데이트 이후 해당 함수(부수효과)를 호출합니다. 또한 해당 함수에서 특정 함수를 return 하면 리액트는 다음 효과 적용 전 리턴되는 함수를 이용해 clean-up phase를 진행합니다. 이러한 구조로 리액트는 데이터 일관성을 보장하며 버그를 방지할 수 있습니다.
-
+>
 > 또한 useEffect의 두 번째 인자로 관련된 변수를 배열로 넣을 수 있습니다. 두 번째 인자로 들어오는 배열에 포함된 변수가 변할때만 부수효과/clean-up phase를 동작하도록 하여 최적화를 진행합니다. 만약 첫 마운트와 unmount시에만 필요한 효과와 clean-up이 있다면 빈 배열을 넘김으로써 구현할 수 있습니다.
-
+>
 > useEffect는 기존 lifecycle methods와 달리 중복된 코드를 방지하고, 연관된 효과들을 코드상 가까이 유지할 수 있도록 도와줍니다. 또한 여러 번의 사용을 통해 연관된 효과들끼리 코드를 나눌 수 있도록 도와줍니다.
-
+>
 > 코드 중복 방지, 일관성 유지, 버그 예방, 역할에 따른 코드 spliting 등의 장점을 갖고 있습니다.
 
 ## 🍷 Network
